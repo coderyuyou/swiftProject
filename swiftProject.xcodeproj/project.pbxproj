@@ -22,6 +22,8 @@
 		E59C7C93228BA5500016F510 /* YYBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C92228BA5500016F510 /* YYBaseModel.swift */; };
 		E59C7C95228BA5610016F510 /* YYBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C94228BA5610016F510 /* YYBaseView.swift */; };
 		E59C7C97228BA5720016F510 /* YYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C96228BA5720016F510 /* YYBaseViewController.swift */; };
+		E59C7C9D228BA8720016F510 /* YYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C9C228BA8720016F510 /* YYConstants.swift */; };
+		E59C7C9F228BA97C0016F510 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C9E228BA97C0016F510 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E59C7C92228BA5500016F510 /* YYBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseModel.swift; sourceTree = "<group>"; };
 		E59C7C94228BA5610016F510 /* YYBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseView.swift; sourceTree = "<group>"; };
 		E59C7C96228BA5720016F510 /* YYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseViewController.swift; sourceTree = "<group>"; };
+		E59C7C9C228BA8720016F510 /* YYConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYConstants.swift; sourceTree = "<group>"; };
+		E59C7C9E228BA97C0016F510 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 		E59C7C85228BA23A0016F510 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E59C7C98228BA7A70016F510 /* Common */,
+				E59C7C99228BA7A70016F510 /* Extension */,
 				E59C7C86228BA23A0016F510 /* AppDelegate.swift */,
 				E59C7C87228BA23A0016F510 /* Info.plist */,
 			);
@@ -218,6 +224,22 @@
 				E59C7C8E228BA4FC0016F510 /* YYNavigationViewController.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		E59C7C98228BA7A70016F510 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E59C7C9C228BA8720016F510 /* YYConstants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E59C7C99228BA7A70016F510 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E59C7C9E228BA97C0016F510 /* UIImage+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +467,8 @@
 				E59C7C91228BA51F0016F510 /* YYTabBarViewController.swift in Sources */,
 				E59C7C93228BA5500016F510 /* YYBaseModel.swift in Sources */,
 				E59C7C89228BA23A0016F510 /* AppDelegate.swift in Sources */,
+				E59C7C9F228BA97C0016F510 /* UIImage+Extension.swift in Sources */,
+				E59C7C9D228BA8720016F510 /* YYConstants.swift in Sources */,
 				E59C7C57228BA0600016F510 /* ViewController.swift in Sources */,
 				E59C7C8F228BA4FC0016F510 /* YYNavigationViewController.swift in Sources */,
 				E59C7C95228BA5610016F510 /* YYBaseView.swift in Sources */,

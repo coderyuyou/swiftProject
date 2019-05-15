@@ -1,5 +1,5 @@
 //
-//  YYBaseModel.swift
+//  UIImage+Extension.swift
 //  swiftProject
 //
 //  Created by YuYou on 2019/5/15.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class YYBaseModel: NSObject {
-
+extension UIImage {
+    
 }

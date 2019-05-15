@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  swiftProject
 //
-//  Created by Ufoto on 2019/5/15.
+//  Created by YuYou on 2019/5/15.
 //  Copyright © 2019 SuperYu. All rights reserved.
 //
 
@@ -14,7 +14,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
 }
 

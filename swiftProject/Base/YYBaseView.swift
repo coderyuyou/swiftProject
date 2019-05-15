@@ -2,7 +2,7 @@
 //  YYBaseView.swift
 //  swiftProject
 //
-//  Created by Ufoto on 2019/5/15.
+//  Created by YuYou on 2019/5/15.
 //  Copyright © 2019 SuperYu. All rights reserved.
 //
 
@@ -10,12 +10,5 @@ import UIKit
 
 class YYBaseView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

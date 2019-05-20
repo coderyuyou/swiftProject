@@ -1,9 +1,9 @@
 PODS:
-  - DeviceKit (2.0.0)
+  - DeviceKit (1.8.1)
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
-  - DeviceKit
+  - DeviceKit (~> 1.8.1)
   - SnapKit
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  DeviceKit: 72d36709552d4b3582abd76a53949148acad9811
+  DeviceKit: eb29be542f5473b46b1c719011cf7de3ec5264ca
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 7c9cb8d56ed40ca6e9600f7075c714bd66b535ab
+PODFILE CHECKSUM: 3e009b1c1a285b6fa4288838d0d6a45e5b302092
 
 COCOAPODS: 1.7.0.beta.3

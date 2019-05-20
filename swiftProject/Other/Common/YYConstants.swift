@@ -18,17 +18,11 @@ let StatusBarSize = UIApplication.shared.statusBarFrame.size
 let StatusBarWidth = max(StatusBarSize.width, StatusBarSize.height)
 let StatusBarHeight = min(StatusBarSize.width, StatusBarSize.height)
 let NavigationBarHeight: CGFloat = 44.0
-
-static let currentDevice = Device()
-let DeviceIsFaceID = currentDevice.isFaceIDCapable
-let IsPad = currentDevice.isPad
-let IsIPhoneXSeries = Dev.iPhoneX
+let StatusNavigationBarHeight = StatusBarHeight + NavigationBarHeight
+let TabbarHeight: CGFloat = DeviceIsFaceID ? 83.0 : 49.0
 
 let PadViewContainerHeight: CGFloat = ScreenHeight - 90 * 1.6 - 62 * 1.6
 let PadViewContainerWidth: CGFloat = PadViewContainerHeight * ScreenHeight / ScreenWidth
-
-let StatusNavigationBarHeight = StatusBarHeight + NavigationBarHeight
-let TabbarHeight: CGFloat = DeviceIsFaceID ? 83.0 : 49.0
 
 let UIDesignWidth: CGFloat = 375
 let UIDesignHeight: CGFloat = 667
@@ -42,19 +36,25 @@ let SafeBottomHeight: CGFloat = SafeAreaInsets.bottom
 
 
 // 颜色
-let COLOR_NavBackground = UIColor.white
 let COLOR_CoverColor = UIColor.init(hex: 0x2b272c, alpha: 0.74)
 let COLOR_CoverBtnNormal = UIColor.init(hex: 0x15f7ff)
 let COLOR_CoverBtnHighlighted = UIColor.init(hex: 0x00d8ff)
 let COLOR_CoverBtnDisabled = UIColor.init(hex: 0x4f8b9c)
+let COLOR_NavBackground = UIColor.white
 let COLOR_TabBarTitle = UIColor(hex: 0x232A4A)
 let COLOR_TintColor = UIColor(hex: 0x32B2F7)
 let COLOR_TitleColor = UIColor(hex: 0x0D73AD)
 let COLOR_BackgroundColor = UIColor(hex: 0x999999)
-let COLOR_HomePageBgColor = UIColor(hex: 0xFDFCF1)
 
 // 字体
 let FONT_TabBarTitle = UIFont.systemFont(ofSize: 11)
+let FONT_NavBarTitle = UIFont.systemFont(ofSize: 26)
+
+
+let currentDevice = Device()
+let DeviceIsFaceID = currentDevice.isFaceIDCapable
+let IsPad = currentDevice.isPad
+let IsIPhoneXSeries = Dev.iPhoneX
 
 // MARK: 设备
 class Dev: NSObject {

@@ -26,6 +26,7 @@
 		E59C7C97228BA5720016F510 /* YYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C96228BA5720016F510 /* YYBaseViewController.swift */; };
 		E59C7C9D228BA8720016F510 /* YYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C9C228BA8720016F510 /* YYConstants.swift */; };
 		E59C7C9F228BA97C0016F510 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C9E228BA97C0016F510 /* UIImage+Extension.swift */; };
+		E5E83D782292B0DE00880C9D /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E83D772292B0DE00880C9D /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E59C7C96228BA5720016F510 /* YYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseViewController.swift; sourceTree = "<group>"; };
 		E59C7C9C228BA8720016F510 /* YYConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYConstants.swift; sourceTree = "<group>"; };
 		E59C7C9E228BA97C0016F510 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		E5E83D772292B0DE00880C9D /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				E59C7C9E228BA97C0016F510 /* UIImage+Extension.swift */,
 				E5353E72228EB7E5001DE859 /* UIcolor+Extension.swift */,
 				E5353E74228EB8F8001DE859 /* String+Extension.swift */,
+				E5E83D772292B0DE00880C9D /* UIFont+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				E59C7C89228BA23A0016F510 /* AppDelegate.swift in Sources */,
 				E59C7C9F228BA97C0016F510 /* UIImage+Extension.swift in Sources */,
 				E59C7C9D228BA8720016F510 /* YYConstants.swift in Sources */,
+				E5E83D782292B0DE00880C9D /* UIFont+Extension.swift in Sources */,
 				E59C7C57228BA0600016F510 /* ViewController.swift in Sources */,
 				E59C7C8F228BA4FC0016F510 /* YYNavigationViewController.swift in Sources */,
 				E59C7C95228BA5610016F510 /* YYBaseView.swift in Sources */,

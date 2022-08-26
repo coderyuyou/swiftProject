@@ -6,7 +6,7 @@ target 'swiftProject' do
   use_frameworks!
 
   pod 'SnapKit'
-  pod 'DeviceKit', '~> 1.8.1'
+  pod 'DeviceKit'
 
   target 'swiftProjectTests' do
     inherit! :search_paths

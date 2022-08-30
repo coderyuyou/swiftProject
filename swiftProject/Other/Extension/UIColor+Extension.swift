@@ -1,5 +1,5 @@
 //
-//  UIcolor+Extension.swift
+//  UIColor+Extension.swift
 //  swiftProject
 //
 //  Created by YuYou on 2019/5/17.

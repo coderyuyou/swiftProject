@@ -51,7 +51,7 @@ let FONT_TabBarTitle = UIFont.systemFont(ofSize: 11)
 let FONT_NavBarTitle = UIFont.systemFont(ofSize: 26)
 
 
-let currentDevice = Device()
+let currentDevice = Device.current
 let DeviceIsFaceID = currentDevice.isFaceIDCapable
 let IsPad = currentDevice.isPad
 let IsIPhoneXSeries = Dev.iPhoneX

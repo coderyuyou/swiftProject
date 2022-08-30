@@ -10,6 +10,8 @@
 		A1A5E8C0C515B09E08326ACD /* Pods_swiftProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C338868DF11384AF60CDC51 /* Pods_swiftProjectTests.framework */; };
 		AD8E4EF21B37C8C046ABEF91 /* Pods_swiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D933DA6406E2733C2A54872 /* Pods_swiftProject.framework */; };
 		B938D851C6D5F71C62C47856 /* Pods_swiftProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60020D123E6BA5C42191E38 /* Pods_swiftProjectUITests.framework */; };
+		BC0DD82528BDF9ED00812256 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DD82428BDF9ED00812256 /* Array+Extension.swift */; };
+		BC0DD82728BE0E8B00812256 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DD82628BE0E8B00812256 /* Dictionary+Extension.swift */; };
 		E5353E73228EB7E5001DE859 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5353E72228EB7E5001DE859 /* UIColor+Extension.swift */; };
 		E5353E75228EB8F8001DE859 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5353E74228EB8F8001DE859 /* String+Extension.swift */; };
 		E59C7C57228BA0600016F510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C7C56228BA0600016F510 /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 		742890A91A72533954C27528 /* Pods-swiftProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftProjectTests.release.xcconfig"; path = "Target Support Files/Pods-swiftProjectTests/Pods-swiftProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A387B84BFCCED33227ADF992 /* Pods-swiftProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-swiftProjectUITests/Pods-swiftProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A60020D123E6BA5C42191E38 /* Pods_swiftProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0DD82428BDF9ED00812256 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		BC0DD82628BE0E8B00812256 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		DDC0EF78EC8918C5DB6CE782 /* Pods-swiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftProject.debug.xcconfig"; path = "Target Support Files/Pods-swiftProject/Pods-swiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E5353E72228EB7E5001DE859 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E5353E74228EB8F8001DE859 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -243,10 +247,12 @@
 		E59C7C99228BA7A70016F510 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E59C7C9E228BA97C0016F510 /* UIImage+Extension.swift */,
 				E5353E72228EB7E5001DE859 /* UIColor+Extension.swift */,
-				E5353E74228EB8F8001DE859 /* String+Extension.swift */,
 				E5E83D772292B0DE00880C9D /* UIFont+Extension.swift */,
+				BC0DD82428BDF9ED00812256 /* Array+Extension.swift */,
+				BC0DD82628BE0E8B00812256 /* Dictionary+Extension.swift */,
+				E59C7C9E228BA97C0016F510 /* UIImage+Extension.swift */,
+				E5353E74228EB8F8001DE859 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E59C7C91228BA51F0016F510 /* YYTabBarViewController.swift in Sources */,
+				BC0DD82728BE0E8B00812256 /* Dictionary+Extension.swift in Sources */,
 				E5353E75228EB8F8001DE859 /* String+Extension.swift in Sources */,
 				E59C7C93228BA5500016F510 /* YYBaseModel.swift in Sources */,
 				E59C7C89228BA23A0016F510 /* AppDelegate.swift in Sources */,
@@ -484,6 +491,7 @@
 				E59C7C8F228BA4FC0016F510 /* YYNavigationViewController.swift in Sources */,
 				E59C7C95228BA5610016F510 /* YYBaseView.swift in Sources */,
 				E59C7C97228BA5720016F510 /* YYBaseViewController.swift in Sources */,
+				BC0DD82528BDF9ED00812256 /* Array+Extension.swift in Sources */,
 				E5353E73228EB7E5001DE859 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

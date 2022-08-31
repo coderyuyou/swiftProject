@@ -30,10 +30,9 @@ extension UIFont {
     /// - Parameters:
     ///   - name: 字体名
     ///   - size: 标准屏大小
-    /// - Returns: 自适应大小
-    class func fitSystem(name: String, size: CGFloat) -> UIFont {
-        let tmpSize = getScreenScale(size)
-        return UIFont(name: name, size: tmpSize) ?? UIFont.systemFont(ofSize: size)
+    convenience init?(fontName: String, fontSize: CGFloat) {
+        let tmpSize = Self.getScreenScale(fontSize)
+        self.init(name:fontName, size:tmpSize)
     }
     
     /// 区别iPad iPhone 字体自适应大小

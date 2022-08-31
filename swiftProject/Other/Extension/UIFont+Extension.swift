@@ -9,44 +9,42 @@
 import UIKit
 
 extension UIFont {
-
-    /// 设置适配iPhone屏幕的一般字体
-    class func set_systemFont(iphoneFont: CGFloat) -> UIFont {
-        
-        return set_systemFont(iphoneFont, 0)
-    }
-    /// 设置适配iPhone屏幕的加粗字体
-    class func set_boldFont(iphoneFont: CGFloat) -> UIFont {
-        
-        return set_boldFont(iphoneFont, 0)
-    }
-    /// 设置适配iPad屏幕的一般字体
-    class func set_systemFont(ipadFont: CGFloat) -> UIFont {
-        
-        return set_systemFont(0, ipadFont)
-    }
-    /// 设置适配iPad屏幕的加粗字体
-    class func set_boldFont(ipadFont: CGFloat) -> UIFont {
-        
-        return set_boldFont(0, ipadFont)
+    
+    /// 自适应字体 - system
+    /// - Parameter size: 标准屏大小
+    /// - Returns: 自适应大小
+    class func fitSystemFont(_ size: CGFloat) -> UIFont {
+        let tmpSize = getScreenScale(size)
+        return UIFont.systemFont(ofSize: tmpSize)
     }
     
-    class func set_systemFont(_ iphoneFont: CGFloat, _ ipadFont: CGFloat) -> UIFont {
-        
-        let width = UIScreen.main.bounds.size.width
-        if IsPad {
-            return UIFont.init(name: "PingFangSC-Regular", size: width / 768 * ipadFont)!
-        }
-        return UIFont.init(name: "PingFangSC-Regular", size: width / 375 * iphoneFont)!
+    /// 自适应字体 - bold
+    /// - Parameter size: 标准屏大小
+    /// - Returns: 自适应大小
+    class func fitBoldFont(_ size: CGFloat) -> UIFont {
+        let tmpSize = getScreenScale(size)
+        return UIFont.boldSystemFont(ofSize: tmpSize)
     }
     
-    class func set_boldFont(_ iphoneFont: CGFloat, _ ipadFont: CGFloat) -> UIFont {
-        
-        let width = UIScreen.main.bounds.size.width
-        if IsPad {
-            return UIFont.boldSystemFont(ofSize: width / 768 * ipadFont)
+    /// 自适应字体
+    /// - Parameters:
+    ///   - name: 字体名
+    ///   - size: 标准屏大小
+    /// - Returns: 自适应大小
+    class func fitSystem(name: String, size: CGFloat) -> UIFont {
+        let tmpSize = getScreenScale(size)
+        return UIFont(name: name, size: tmpSize) ?? UIFont.systemFont(ofSize: size)
+    }
+    
+    /// 区别iPad iPhone 字体自适应大小
+    private class func getScreenScale(_ size: CGFloat) -> CGFloat {
+        var tmpSize = size
+        if YYDevice.isPhone {
+            tmpSize = YYLayout.ScreenWidth / 375 * size
+        } else if YYDevice.isPad {
+            tmpSize = YYLayout.ScreenWidth / 768 * size
         }
-        return UIFont.boldSystemFont(ofSize: width / 375 * iphoneFont)
+        return tmpSize
     }
 }
 

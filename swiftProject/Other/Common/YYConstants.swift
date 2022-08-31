@@ -11,29 +11,31 @@ import UIKit
 import DeviceKit
 
 // UI
-let ScreenWidth = UIScreen.main.bounds.width
-let ScreenHeight = UIScreen.main.bounds.height
-let ScreenBounds = UIScreen.main.bounds
-let StatusBarSize = UIApplication.shared.statusBarFrame.size
-let StatusBarWidth = max(StatusBarSize.width, StatusBarSize.height)
-let StatusBarHeight = min(StatusBarSize.width, StatusBarSize.height)
-let NavigationBarHeight: CGFloat = 44.0
-let StatusNavigationBarHeight = StatusBarHeight + NavigationBarHeight
-let TabbarHeight: CGFloat = DeviceIsFaceID ? 83.0 : 49.0
+struct YYLayout {
+    
+    static let ScreenWidth = UIScreen.main.bounds.width
+    static let ScreenHeight = UIScreen.main.bounds.height
+    static let ScreenBounds = UIScreen.main.bounds
+    static let StatusBarSize = UIApplication.shared.statusBarFrame.size
+    static let StatusBarWidth = max(StatusBarSize.width, StatusBarSize.height)
+    static let StatusBarHeight = min(StatusBarSize.width, StatusBarSize.height)
+    static let NavigationBarHeight: CGFloat = 44.0
+    static let StatusNavigationBarHeight = StatusBarHeight + NavigationBarHeight
+    static let TabbarHeight: CGFloat = YYDevice.isFullScreen ? 83.0 : 49.0
 
-let PadViewContainerHeight: CGFloat = ScreenHeight - 90 * 1.6 - 62 * 1.6
-let PadViewContainerWidth: CGFloat = PadViewContainerHeight * ScreenHeight / ScreenWidth
+    static let PadViewContainerHeight: CGFloat = ScreenHeight - 90 * 1.6 - 62 * 1.6
+    static let PadViewContainerWidth: CGFloat = PadViewContainerHeight * ScreenHeight / ScreenWidth
 
-let UIDesignWidth: CGFloat = 375
-let UIDesignHeight: CGFloat = 667
+    static let UIDesignWidth: CGFloat = 375
+    static let UIDesignHeight: CGFloat = 667
 
-let ScreenHeightScale: CGFloat = ScreenHeight / 667
-let ScreenScale: CGFloat = ScreenWidth / 375
+    static let ScreenHeightScale: CGFloat = ScreenHeight / 667
+    static let ScreenScale: CGFloat = ScreenWidth / 375
 
-let SafeAreaInsets: UIEdgeInsets = Dev.iPhoneX ? UIEdgeInsets.init(top: 24, left: 0, bottom: 17, right: 0) : UIEdgeInsets.zero
-let SafeTopHeight: CGFloat = SafeAreaInsets.top
-let SafeBottomHeight: CGFloat = SafeAreaInsets.bottom
-
+    static let SafeAreaInsets: UIEdgeInsets = YYDevice.isFullScreen ? UIEdgeInsets.init(top: 24, left: 0, bottom: 17, right: 0) : UIEdgeInsets.zero
+    static let SafeTopHeight: CGFloat = SafeAreaInsets.top
+    static let SafeBottomHeight: CGFloat = SafeAreaInsets.bottom
+}
 
 // 颜色
 let COLOR_CoverColor = UIColor.init(hex: 0x2b272c, alpha: 0.74)
@@ -50,28 +52,25 @@ let COLOR_BackgroundColor = UIColor(hex: 0x999999)
 let FONT_TabBarTitle = UIFont.systemFont(ofSize: 11)
 let FONT_NavBarTitle = UIFont.systemFont(ofSize: 26)
 
+/// 设备
+struct YYDevice {
+    static let current = Device.current
+    static let isPad = Device.current.isPad
+    static let isPhone = Device.current.isPhone
+    static var isFullScreen: Bool {
+        let allXSeriesDevices = Device.allDevicesWithSensorHousing
+        let state = allXSeriesDevices.contains(Device.current)
+        return state
+    }
+}
 
-let currentDevice = Device.current
-let DeviceIsFaceID = currentDevice.isFaceIDCapable
-let IsPad = currentDevice.isPad
-let IsIPhoneXSeries = Dev.iPhoneX
-
-// MARK: 设备
-class Dev: NSObject {
-    
-    static let iPhone4 = {
-        return ScreenHeight < 481
-    }()
-    
-    static let iPhone5 = {
-        return ScreenHeight < 600 && ScreenHeight > 500
-    }()
-    
-    static let iPhonePlus = {
-        return ScreenWidth > 375 && ScreenHeight > 667
-    }()
-    
-    static let iPhoneX = {
-        return ScreenHeight / ScreenWidth > 17 / 9.0
-    }()
+/// sandbox
+struct YYDirectory {
+    ///
+    static var documentPath: String {
+        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true).first ?? ""
+    }
+    static var tempPath: String {
+        return NSTemporaryDirectory()
+    }
 }

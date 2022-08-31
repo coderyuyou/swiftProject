@@ -78,8 +78,8 @@ class YYBaseViewController: UIViewController {
             return
         }
         self.navigationController?.navigationBar.barTintColor = navBarColor
-        self.navigationController?.navigationBar.shadowImage = UIImage.imageWithColor(with: navBarColor, size: CGSize(width: ScreenWidth, height: 1))
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(with: navBarColor, size: CGSize(width: ScreenWidth, height: 1)), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage.imageWithColor(with: navBarColor, size: CGSize(width: YYLayout.ScreenWidth, height: 1))
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(with: navBarColor, size: CGSize(width: YYLayout.ScreenWidth, height: 1)), for: .default)
         var white: CGFloat = 0
         let get = self.navBarColor.getWhite(&white, alpha: nil)
         UIApplication.shared.statusBarStyle = get && (white > 0.9) ? .default : .lightContent
